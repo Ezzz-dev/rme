@@ -116,7 +116,9 @@ _Ret_bytecap_(_Size) inline void* __CRTDECL operator new[](size_t _Size, const c
 #include <queue>
 #include <stdexcept>
 #include <stdlib.h>
+#ifdef _WIN32
 #include <crtdbg.h>
+#endif
 #include <time.h>
 #include <fstream>
 #include <memory>

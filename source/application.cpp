@@ -641,6 +641,7 @@ void MainFrame::PrepareDC(wxDC& dc)
 }
 
 // This is necessary for cmake to understand that it needs to set the executable
+#ifdef _WIN32
 int main(int argc, char** argv)
 {
 	wxEntryStart(argc, argv); // Start the wxWidgets library
@@ -650,3 +651,4 @@ int main(int argc, char** argv)
 	wxEntryCleanup(); // Clear the wxWidgets library
 	return 0;
 }
+#endif
